@@ -195,7 +195,7 @@ func (r *FlightRepository) Delete(ctx context.Context, id string) error {
     return nil
 }
 
-// Получение рейса по номеру (для QR кода)
+// Получение рейса по номеру
 func (r *FlightRepository) GetByFlightNumber(ctx context.Context, flightNumber string) (*models.Flight, error) {
     query := `
         SELECT id, flight_number, airline, origin, destination, 
