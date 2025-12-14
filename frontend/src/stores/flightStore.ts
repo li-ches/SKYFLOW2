@@ -7,7 +7,6 @@ interface FlightState {
   isLoading: boolean
   error: string | null
   
-  // Actions
   setFlights: (flights: Flight[]) => void
   setCurrentFlight: (flight: Flight | null) => void
   addFlight: (flight: Flight) => void
