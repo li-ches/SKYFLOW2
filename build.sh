@@ -3,19 +3,19 @@
 
 echo "🚀 Building SKYFLOW project..."
 
-# 1. Build frontend
+# 1. frontend
 echo "📱 Building frontend..."
 cd frontend
 npm run build
 
-# 2. Copy to backend
+# 2. backend
 echo "📦 Copying frontend to backend..."
 cd ..
 rm -rf backend/static
 mkdir -p backend/static
 cp -r frontend/dist/* backend/static/
 
-# 3. Build backend
+
 echo "⚡ Building backend..."
 cd backend
 go mod download
