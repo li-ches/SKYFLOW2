@@ -39,7 +39,7 @@ export const PublicPage: React.FC<PublicPageProps> = ({ baseUrl }) => {
     const timeInterval = setInterval(updateTime, 1000);
     const flightInterval = setInterval(loadFlights, 5000);
     
-    // Получаем доступные URL и инструкции
+    // Получаем доступные инструкции
     setAvailableUrls(getAvailableUrls());
     setInstructions(getConnectionInstructions());
     
@@ -85,7 +85,7 @@ export const PublicPage: React.FC<PublicPageProps> = ({ baseUrl }) => {
         if (updatedFlight) {
           setSelectedFlight(updatedFlight);
         } else {
-          // Если выбранный рейс удалили, НИЧЕГО не выбираем автоматически
+          // Если выбранный рейс удалили, ничего не выбираем автоматически
           // Оставляем selectedFlight как есть (null или удаленный рейс)
         }
       }
@@ -327,7 +327,7 @@ export const PublicPage: React.FC<PublicPageProps> = ({ baseUrl }) => {
           </div>
         </div>
 
-        {/* Airport Info */}
+        {/* Информация об аэропорте */}
         <div className="mt-8 bg-white rounded-xl shadow-lg p-6">
           <h2 className="text-xl font-bold text-gray-800 mb-4">Информация об аэропорте</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
